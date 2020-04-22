@@ -2,7 +2,7 @@
 通达oa 前台身份绕过 getshell
 
 #usage
-python tongda_rce.py url.txt
+python tongda.py url.txt
 
 默认一句话密码a
 ## 测试范围
