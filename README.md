@@ -5,7 +5,7 @@
 python tongda_rce.py url.txt
 
 ## 测试范围
-# v2017
+v2017
 
 ## Referrer
 https://github.com/NS-Sp4ce/TongDaOA-Fake-User
