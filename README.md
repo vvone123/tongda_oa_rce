@@ -1,7 +1,8 @@
 # tongda_oa_rce
-通达oa 身份绕过批量getshell
+通达oa 身份绕过 getshell
 
-usage: python tongda_rce.py url.txt
+usage:
+python tongda_rce.py url.txt
 
 ## Referrer
 https://github.com/NS-Sp4ce/TongDaOA-Fake-User
